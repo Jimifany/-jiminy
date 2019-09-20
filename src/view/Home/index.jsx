@@ -67,7 +67,18 @@ class HomePage extends Component {
                 </tr>
                 </tbody>
             </table>
-            
+            {/* <div className={styles.edtor}>
+<div className={styles.left}>
+    <p style={{margin:'10px 25px',display:'flex'}}><span style={{fontWeight:'bolder'}}>编辑内容</span><span style={{marginLeft:'210px'}}>X</span></p>
+    <ul>
+        <li><span style={{padding:'0 10px'}}>理论：</span><input type="text" placeholder="0-100之间数字" style={{border:'1px solid #cccc',textAlign:'center'}}/></li>
+        <li><span style={{padding:'0 10px'}}>技能：</span><input type="text" placeholder="0-100之间数字" style={{border:'1px solid #cccc',textAlign:'center'}}/></li>
+        <li><button style={{border:'rgb(0, 118, 255) 1px solid',marginLeft:'65px'}}><input type="checkbox"/>日考</button><button style={{border:'rgb(0, 118, 255) 1px solid',margin:'0 20px'}}><input type="checkbox"/>周考</button></li>
+        <li></li>
+    </ul>
+</div>
+<div className={styles.right}></div>
+            </div> */}
             </div>
         </div>
     }
