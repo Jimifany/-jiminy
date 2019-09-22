@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import styles from "./home.css"
 
 class HomePage extends Component {
-    state={
-        bol:false
+    state = {
+        bol: false
     }
-    editorFun(){
+    editorFun=()=> {
         console.log(22)
+        // console.log(this.state)
         this.setState({
-            bol:true
+            bol: true
         })
     }
     render() {
@@ -45,9 +46,9 @@ class HomePage extends Component {
                             <td>Success</td>
                             <td>对方过后就给范德萨的风格和接口规范的撒上辅导过后就会看见割发代首撒的风格和减肥的撒的风格和</td>
                             <td>是</td>
-                            <td><span onClick={()=>{
+                            <td><span onClick={
                                 this.editorFun
-                            }}>编辑</span>,<span>删除</span></td>
+                            }>编辑</span>,<span>删除</span></td>
                         </tr>
                         <tr>
                             <td> 1</td>
@@ -78,19 +79,19 @@ class HomePage extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <div className={styles.shade}>
+                <div className={styles.shade} style={{display:this.state.bol?'block':'none'}}>
                     <div className={styles.editorBox}>
                         {/* <p><span></span></p> */}
                         <ul>
-                            <li style={{display:'flex',justifyContent:'space-between'}}><b>编辑内容</b><span style={{marginRight:'20px'}}>X</span></li>
-                            <li><span>理论 ：</span><input type="text" placeholder="请输入0-100之间数字" style={{border:'none'}}/></li>
-                            <li ><span>技能 ：</span><input type="text" placeholder="请输入0-100之间数字" style={{border:'none'}}/></li>
+                            <li style={{ display: 'flex', justifyContent: 'space-between' }}><b>编辑内容</b><span style={{ marginRight: '20px' }}>X</span></li>
+                            <li><span>理论 ：</span><input type="text" placeholder="请输入0-100之间数字" style={{ border: 'none' }} /></li>
+                            <li ><span>技能 ：</span><input type="text" placeholder="请输入0-100之间数字" style={{ border: 'none' }} /></li>
                             <li>
                                 <button style={{ border: '1px solid rgb(0, 118, 255)' }} className={styles.btn}><input type="checkbox" />日考</button>
                                 <button style={{ border: '1px solid rgb(0, 118, 255)' }} className={styles.btn}><input type="checkbox" />周考</button>
                             </li>
-                            <li style={{display:'flex'}}><span>分析解决方案 :  </span><input type="text" style={{display:'block',height:'60px',border:'none'}}/></li>
-                            <li ><button style={{marginLeft:'180px'}}>取消</button><button style={{background:'rgb(0, 118, 255)',color:'#fff'}}>确定</button></li>
+                            <li style={{ display: 'flex' }}><span>分析解决方案 :  </span><input type="text" style={{ display: 'block', height: '60px', border: 'none' }} /></li>
+                            <li ><button style={{ marginLeft: '180px' }}>取消</button><button style={{ background: 'rgb(0, 118, 255)', color: '#fff' }}>确定</button></li>
                         </ul>
                     </div>
                     {/* <div className={styles.left}>

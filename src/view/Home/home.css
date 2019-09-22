@@ -119,12 +119,13 @@ body {
     .con .center .shade {
         width: 94%;
         height: 64%;
-        background: rgb(0, 0, 0, .5);
+        /* background: rgb(0, 0, 0, .5); */
         position: absolute;
         left: 3%;
         top: 15%;
         /* display: flex; */
         /* line-height: 64%; */
+        display: none;
     }
     .con .center .shade .editorBox {
         width: 30%;
@@ -151,9 +152,9 @@ body {
         margin-left: 20px;
         background: #fff;
     }
-    /* .active{
-
-    } */
+    .active {
+        display: block;
+    }
 }
 
 
