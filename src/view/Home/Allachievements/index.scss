@@ -68,6 +68,149 @@ body {
     height: 0.685rem;
     border: 1px solid #ccc;
   }
+  :global {
+    .mask-change{
+     position: absolute;
+      top: 20%;
+      left: 50%;
+      margin-left: -1.50rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      line-height: 0.2rem;
+      border: 0.01rem solid #ccc;
+      border-radius: 0.04rem;
+      display: flex;
+      z-index: 30;
+      flex-direction: column;
+    
+        h2 {
+            font-size: 0.16rem;
+            height: 0.35rem;
+            line-height: 0.35rem;
+            padding-left: 5%;
+            margin-bottom: 0.15rem;
+        }
+    
+        .mask-change-inp {
+          margin-bottom: 0.15rem;
+          display: flex;
+          align-items: center;
+    
+          label {
+            display: inline-block;
+            text-align: center;
+            width: 1rem;
+          }
+    
+          input {
+            width: 2.57rem;
+            height: 0.35rem;
+            line-height: 0.35rem;
+            border-radius: 0.04;
+            text-align: center;
+            border: 0.01rem solid #ccc;
+          }
+    
+          textarea {
+            width: 2.57rem;
+            height: 0.43rem;
+            line-height: 0.2rem;
+            border-radius: 0.04rem;
+            background-color: rgba(255, 255, 255, 1);
+            text-align: center;
+            border: 0.01rem solid rgba(220, 223, 230, 1);
+          }
+        }
+    
+        .mask-change-choose {
+          display: flex;
+          justify-content: center;
+          margin: 0.1rem 0;
+    
+          div {
+            width: 1.0rem;
+            height: 0.4rem;
+            border-radius: 0.04rem;
+            color: #1989fa;
+            border: 0.01rem solid #1989fa;
+            text-align: center;
+            line-height: 0.4rem;
+            margin-left: 0.01rem;
+    
+            input {
+              margin-right: 0.05rem;
+            }
+          }
+        }
+    
+        .mask-change-btns {
+          margin-top: 0.01rem;
+          flex: 6;
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 0.5rem;
+    
+          button {
+            height: 0.45rem;
+            width: 1.20rem;
+            margin-left: 0.2rem;
+            outline: 0;
+            border: none;
+            border-radius: 0.05rem;
+          }
+        }
+      }
+    
+      .dialog {
+        .mask {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            margin-left: -1.50rem;
+            width: 2.6rem;
+            height: 2.6rem;
+            line-height: 0.2rem;
+            border: 0.01rem solid #ccc;
+            background-color: #fff;
+            border-radius: 0.04rem;
+            display: flex;
+            z-index: 30;
+            flex-direction: column;
+    
+          .mask-desc {
+            flex: 4;
+            padding: 20px 0 0 50px;
+    
+            .warn {
+              display: inline-block;
+              width: 0.34rem;
+              height: 0.34rem;
+              background-color: rgba(250, 173, 20, 1);
+              line-height: 0.34rem;
+              text-align: center;
+              border-radius: 50%;
+              margin-right: 30px;
+            }
+          }
+    
+          .mask-btns {
+            flex: 6;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 0.50rem;
+    
+            button {
+              height: 0.45rem;
+              width: 1.20rem;
+              margin-left: 0.2rem;
+              outline: 0;
+              border: none;
+              border-radius: 0.05rem;
+            }
+          }
+        }
+      }
+  }
 }
 
 
@@ -86,7 +229,6 @@ body {
   .center {
     width: 95%;
     height: auto;
-    background: #eee;
     margin: 0 auto;
   }
 
@@ -94,7 +236,7 @@ body {
     width: 100%;
     height: 80px;
     text-align: center;
-    border: #ccc 1px solid;
+    border: rgb(144, 147, 153) 1px solid;
     display: flex;
     align-items: center;
     margin: 25px auto;
@@ -106,7 +248,7 @@ body {
 
   .top input {
     height: 40px;
-    border: 1px solid #cccccc;
+    border: 1px solid rgb(144, 147, 153);
     border-radius: 5px;
     text-align: center;
     position: relative;
@@ -118,7 +260,7 @@ body {
     width: 100%;
     height: 343px;
     text-align: center;
-    border: #ccc 1px solid;
+    border: rgb(144, 147, 153) 1px solid;
     margin: 17px auto;
   }
 
@@ -128,7 +270,7 @@ body {
 
   table tr {
     height: 68.5px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(144, 147, 153);
   }
 
   .con .center .shade {

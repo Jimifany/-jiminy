@@ -1,10 +1,11 @@
 import axios from 'axios';
-
+import {getToken} from './index'
 const instance = axios.create({
   baseURL:'/api',
   timeout: 1000,
+  headers:{'sessionid':getToken('')}//给请求头添加免登陆信息
 });
-
+console.log(getToken())
 // Add a request interceptor
 instance.interceptors.request.use(function (config) {
   console.log(config)

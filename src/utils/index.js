@@ -1,5 +1,5 @@
 import * as Cookie from 'js-cookie'
-const key = 'authorization'
+const key = 'sessionid'
 export let getToken=()=>{
     return Cookie.get(key)
 }

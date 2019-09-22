@@ -3,6 +3,9 @@ import styles from "./index.css";
 import Delete from '../../../component/delete'
 import Complier from '../../../component/compiler'
 import './index.css'
+import {connect} from 'dva'
+import {Userinfo} from '../../../service/index'
+import {getToken} from '../../../utils/index'
 const list = [
   {
     id: 1,
@@ -48,11 +51,19 @@ const list = [
   }
 ];
 const HomePage = props => {
+  //获取学生列表
+  useEffect( ()=>{
+      
+  })
    //删除弹框的显示
  let [deleteShow,setDeleteShow]=useState(false)
  //编辑弹框的显示
  let [changeShow,setChangeShow]=useState(false)
- let handClick =()=>{
+ let handClick =async ()=>{
+  const result = await Userinfo({
+    "cid":"1234"
+  })
+  console.log(result)
       setChangeShow(true)
   }
 
@@ -66,6 +77,7 @@ const HomePage = props => {
   let handDeleteHide =(flag)=>{
     setDeleteShow(flag)
   }
+  console.log(getToken())
   return (
     <div className={styles.con}>
       {/* this is homepage */}
@@ -80,7 +92,7 @@ const HomePage = props => {
         </div>
         <table border="1">
           <tbody>
-             {list.map((item,index)=><tr>
+             {list.map((item,index)=><tr key={index}>
                  <td>{item.id}</td>
                  <td>{item.date}</td>
                  <td>{item.theory}</td>
@@ -97,5 +109,15 @@ const HomePage = props => {
     </div>
   );
 };
-
-export default HomePage;
+const mapStateToprops = (state)=>{
+  // console.log(state.userInfo)
+  // return state.userInfo
+}
+const mapDispatch2props = (dispatch)=>{
+  return {
+    // getUserinfo(){
+    //   dispatch({type:'/userInfo/userinfo',})
+    // }
+  }
+}
+export default connect(mapStateToprops,mapDispatch2props)(HomePage)
